@@ -1,0 +1,26 @@
+footer {
+  background-color: #353535;
+  height: auto;
+  padding: 0 30px;
+  color: rgb(245, 245, 245);
+  h2 {
+    color: rgb(245, 245, 245);
+    font-weight: 500;
+    font-family: "Shrikhand", cursive;
+    color: white;
+    padding-top: 20px;
+    margin-top: -20px;
+  }
+  p {
+    padding-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  i {
+    margin-right: 5px;
+  }
+  a {
+    display: flex;
+    align-items: center;
+  }
+}

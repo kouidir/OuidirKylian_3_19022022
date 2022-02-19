@@ -1,0 +1,25 @@
+.localisation {
+  display: flex;
+  color: rgb(77, 77, 77);
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background-color: rgb(235, 235, 235);
+  padding: 6px;
+  height: 60px;
+  margin: 0 auto;
+  .locdetail {
+    margin: 0 auto;
+    i {
+      margin-left: 55px;
+      margin-right: 3px;
+    }
+  }
+  .placeholder {
+    border: none;
+    background-color: rgb(235, 235, 235);
+    font-size: larger;
+    font-weight: bold;
+    padding-left: 2px;
+  }
+}

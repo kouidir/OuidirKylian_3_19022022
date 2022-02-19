@@ -1,0 +1,155 @@
+.menuAccueil {
+  background-color: rgb(247, 247, 247);
+  padding-bottom: 40px;
+  h2 {
+    margin: 0;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+  .premierBlock {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding-bottom: 0px;
+    }
+
+    .new {
+      position: relative;
+    }
+
+    .new::before {
+      content: "Nouveau";
+      color: darken($color: #99e2d0, $amount: 50%);
+      display: grid;
+      place-items: center;
+      position: absolute;
+      height: 25px;
+      width: 75px;
+      background-color: #99e2d0;
+      border-radius: 2px;
+      right: 18px;
+      top: 18px;
+    }
+    .cube {
+      width: 40%;
+      height: 100%;
+      background-color: white;
+      border-radius: 15px;
+      animation-fill-mode: backwards;
+      animation: appear 1s;
+
+      @media (max-width: 768px) {
+        margin: 0 auto;
+        margin-bottom: 20px;
+        width: 90%;
+      }
+      .imagecubeaccueil {
+        width: 100%;
+        height: 150px;
+        border-radius: 15px 15px 0px 0px;
+        object-fit: cover;
+      }
+      .cubeText {
+        position: relative;
+        height: 70px;
+        padding-left: 10px;
+        h3 {
+          margin: 0;
+          padding-top: 10px;
+        }
+        p {
+          margin: 0;
+          padding-top: 5px;
+        }
+        i {
+          font-size: 30px;
+          position: absolute;
+          right: 25px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        .fas {
+          color: transparent;
+          background-image: linear-gradient(358deg, #9356dc, #ff79da);
+          background-clip: text;
+          -webkit-background-clip: text;
+          opacity: 0;
+          transition: all 200ms ease-in-out;
+        }
+
+        .fas:hover {
+          opacity: 1;
+          transform: translateY(-50%) scale(1.2);
+        }
+      }
+    }
+  }
+  .secondBlock {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 50px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+    .cube {
+      width: 40%;
+      height: 100%;
+      background-color: white;
+      border-radius: 15px;
+      animation-fill-mode: backwards;
+      animation: appear 1s;
+      @media (max-width: 768px) {
+        margin: 0 auto;
+        margin-bottom: 20px;
+        width: 90%;
+      }
+      .imagecubeaccueil {
+        width: 100%;
+        height: 150px;
+        border-radius: 15px 15px 0px 0px;
+        object-fit: cover;
+      }
+      .cubeText {
+        position: relative;
+        height: 70px;
+        padding-left: 10px;
+        h3 {
+          margin: 0;
+          padding-top: 10px;
+        }
+        p {
+          margin: 0;
+          padding-top: 5px;
+        }
+        i {
+          font-size: 30px;
+          position: absolute;
+          right: 25px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        .fas {
+          color: transparent;
+          background-image: linear-gradient(358deg, #9356dc, #ff79da);
+          background-clip: text;
+          -webkit-background-clip: text;
+          opacity: 0;
+          transition: all 200ms ease-in-out;
+        }
+
+        .fas:hover {
+          opacity: 1;
+          transform: translateY(-50%) scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+.cube:hover {
+  transform: scale(1.02);
+}

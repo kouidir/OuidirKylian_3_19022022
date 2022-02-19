@@ -1,0 +1,60 @@
+@use "./utils/box-shadow.scss";
+@use "./utils/scale.scss";
+
+.fonctionnement {
+  padding-left: 40px;
+  padding-right: 40px;
+  counter-reset: steps;
+  margin-bottom: 70px;
+  h2 {
+    margin-bottom: 25px;
+  }
+  ol {
+    display: flex;
+    gap: 25px;
+    padding: 0;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  li {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    position: relative;
+    list-style-type: none;
+    background-color: #f6f6f6;
+    padding: 15px 20px;
+    flex-grow: 1;
+    border-radius: 15px;
+    @include box-shadow.base-shadow;
+  }
+  li:hover {
+    @include scale.scale;
+    background-color: rgba($color: #9356dc, $alpha: 0.1);
+
+    i {
+      color: #9356dc;
+    }
+  }
+  li::before {
+    position: absolute;
+    content: counter(steps);
+    counter-increment: steps;
+    color: white;
+    background-color: #9356dc;
+    display: grid;
+    place-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+  }
+
+  i {
+    margin-left: 20px;
+    margin-right: 15px;
+  }
+}
